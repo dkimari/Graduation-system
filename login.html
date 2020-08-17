@@ -1,0 +1,82 @@
+<?php 
+   $username = $_POST['user'];
+   $password = $_POST['pass'];
+
+   $username = stripcslashes($username);
+   $password = stripcslashes($password);
+   $username = mysql_real_escape_string($username);
+   $password = mysql_real_escape_string($password);
+
+
+   //connect to the server
+   mysql_connect("locolhost", "root", "");
+   mysql_select_db("login");
+
+   $result = mysql_query("select * from users where username = '$username' and password = '$password'")
+                   or die("failed to query database ".mysql_error());
+
+    $row = mysql_fetch_array($result);
+    if($row['username'] == $username && row['password'] == $password)
+    {
+        echo "log-in was successful!! Welcome...".$row['username'];
+    }
+    else
+    {
+        echo "Failed to log-in!";
+    }
+
+
+?>
+
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Graduation sign-up</title>
+  <link rel="stylesheet" type="text/css" href="signin.css"/>
+  </head>
+  <body>
+      <header>
+<div class="main">
+    <div class="logo">
+    <img src="logo.jpg">
+    </div>
+<ul>
+    <li class="active"><a href="login.html">Home</a></li>
+    <li><a href="#">Contact Us</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Help</a></li>
+    <li>
+        
+    
+</ul>
+</div>
+<div class="title">
+    <h1> USIU GRADUATION VERIFY</h1>
+</div>
+
+
+ 
+<div class="login-box">
+
+<form action = "process.php" method = "POST">
+
+    <div class ="textbox">
+            <i class="fa fa-user white" aria-hidden="true" ></i>
+
+        <input type="text" placeholder="Username" name="user" id="user">
+    </div>
+
+    <div class ="textbox">
+            <i class="fa fa-lock white" aria-hidden="true"></i>
+
+            <input type="Password" placeholder="Password" name="pass" id="pass">
+        </div>
+
+        <input class="btn" type="button" id="btn" value="Login">
+    </form>
+
+</div>
+
+      </header>
+
+  </body>

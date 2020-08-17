@@ -1,0 +1,111 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+*{
+    margin: 0;
+    padding: 0;
+    font-family: century gothic;
+}
+
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("grad3.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+ul li{
+    display: inline-block;
+}
+ul li.active a{
+    background-color: #0A1172;
+    color: #ffffff;
+}
+ul li a{
+    text-decoration: none;
+    color: #000000;
+    padding: 5px 20px;
+    border:  1px solid #000000 transparent;
+    transition: 0.6s ease;
+}
+ul li a:hover{
+    background-color: #0A1172;
+    color: #ffffff;
+}
+.logo img{
+    float: left;
+    width: 170px;
+    height: 130px;
+}
+.main{
+    max-width: 1850px;
+    margin: auto;
+}
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.title h1{
+    color: hsl(48, 97%, 58%);
+    font-size: 50px;
+
+}
+.login-box{
+    padding-top: 50px;
+    width: 280px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.textbox{
+    width: 100;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid #fcd12a;
+}
+.white, .white a {
+    color: #ffffff;
+  }
+  .textbox i{
+      width: 26px;
+      float: left;
+      text-align: center;
+  }
+
+  .textbox input{
+      border: none;
+      outline: none;
+      background: none;
+      color: #ffffff;
+      font-size: 18px;
+      width: 90px;
+      float: left;
+      margin: 0 10px;
+      transition: 0.6s ease;
+  }
+.btn {
+    width: 100%;
+    border: 2px solid #fcd12a;
+    background: none;
+    color: #ffffff;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin:12px 0;
+    transition: 0.6s ease;
+}
+.btn:hover{
+    background-color: #0A1172;
+    color: #ffffff;
+}
+
+

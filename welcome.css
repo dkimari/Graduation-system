@@ -1,0 +1,23 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("usiu2.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+  
+  padding :30px;
+  
+
+}
+h1{
+    color: hsl(48, 97%, 58%);
+    font-size: 35px;
+    text-align: center;
+}
+
+embed {
+    padding-left: 150px;
+  }
